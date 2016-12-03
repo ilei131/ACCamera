@@ -47,15 +47,16 @@
 		7DDEC9101DF2F7630035F4FC /* ACPhotosVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC9081DF2F7630035F4FC /* ACPhotosVC.m */; };
 		7DDEC9111DF2F7630035F4FC /* ACRootVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC90A1DF2F7630035F4FC /* ACRootVC.m */; };
 		7DDEC9121DF2F7630035F4FC /* ACSessionVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC90C1DF2F7630035F4FC /* ACSessionVC.m */; };
-		7DDEC92E1DF30A780035F4FC /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC9281DF30A780035F4FC /* IMCore.framework */; };
-		7DDEC92F1DF30A780035F4FC /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC9291DF30A780035F4FC /* ImSDK.framework */; };
-		7DDEC9301DF30A780035F4FC /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC92A1DF30A780035F4FC /* IMSDKBugly.framework */; };
-		7DDEC9311DF30A780035F4FC /* QALHttpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC92B1DF30A780035F4FC /* QALHttpSDK.framework */; };
-		7DDEC9321DF30A780035F4FC /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC92C1DF30A780035F4FC /* QALSDK.framework */; };
-		7DDEC9331DF30A780035F4FC /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC92D1DF30A780035F4FC /* TLSSDK.framework */; };
 		7DDEC9361DF30F6E0035F4FC /* ACBaseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC9351DF30F6E0035F4FC /* ACBaseVC.m */; };
 		7DDEC93A1DF310F70035F4FC /* nav_arrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DDEC9381DF310F70035F4FC /* nav_arrow@2x.png */; };
 		7DDEC93B1DF310F70035F4FC /* nav_arrow_click@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7DDEC9391DF310F70035F4FC /* nav_arrow_click@2x.png */; };
+		7DDEC94C1DF313430035F4FC /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC94B1DF313430035F4FC /* Test.m */; };
+		7DDEC9531DF313740035F4FC /* IMCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC94D1DF313740035F4FC /* IMCore.framework */; };
+		7DDEC9541DF313740035F4FC /* ImSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC94E1DF313740035F4FC /* ImSDK.framework */; };
+		7DDEC9551DF313740035F4FC /* IMSDKBugly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC94F1DF313740035F4FC /* IMSDKBugly.framework */; };
+		7DDEC9561DF313740035F4FC /* QALHttpSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC9501DF313740035F4FC /* QALHttpSDK.framework */; };
+		7DDEC9571DF313740035F4FC /* QALSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC9511DF313740035F4FC /* QALSDK.framework */; };
+		7DDEC9581DF313740035F4FC /* TLSSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DDEC9521DF313740035F4FC /* TLSSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,16 +111,18 @@
 		7DDEC90C1DF2F7630035F4FC /* ACSessionVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACSessionVC.m; sourceTree = "<group>"; };
 		7DDEC9131DF2F7860035F4FC /* macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = macro.h; sourceTree = "<group>"; };
 		7DDEC9141DF2F7AD0035F4FC /* ACCamera-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ACCamera-Prefix.pch"; sourceTree = "<group>"; };
-		7DDEC9281DF30A780035F4FC /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
-		7DDEC9291DF30A780035F4FC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
-		7DDEC92A1DF30A780035F4FC /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
-		7DDEC92B1DF30A780035F4FC /* QALHttpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALHttpSDK.framework; sourceTree = "<group>"; };
-		7DDEC92C1DF30A780035F4FC /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
-		7DDEC92D1DF30A780035F4FC /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
 		7DDEC9341DF30F6E0035F4FC /* ACBaseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACBaseVC.h; sourceTree = "<group>"; };
 		7DDEC9351DF30F6E0035F4FC /* ACBaseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACBaseVC.m; sourceTree = "<group>"; };
 		7DDEC9381DF310F70035F4FC /* nav_arrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_arrow@2x.png"; sourceTree = "<group>"; };
 		7DDEC9391DF310F70035F4FC /* nav_arrow_click@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav_arrow_click@2x.png"; sourceTree = "<group>"; };
+		7DDEC94A1DF313430035F4FC /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		7DDEC94B1DF313430035F4FC /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
+		7DDEC94D1DF313740035F4FC /* IMCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMCore.framework; sourceTree = "<group>"; };
+		7DDEC94E1DF313740035F4FC /* ImSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ImSDK.framework; sourceTree = "<group>"; };
+		7DDEC94F1DF313740035F4FC /* IMSDKBugly.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = IMSDKBugly.framework; sourceTree = "<group>"; };
+		7DDEC9501DF313740035F4FC /* QALHttpSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALHttpSDK.framework; sourceTree = "<group>"; };
+		7DDEC9511DF313740035F4FC /* QALSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QALSDK.framework; sourceTree = "<group>"; };
+		7DDEC9521DF313740035F4FC /* TLSSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TLSSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,12 +130,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DDEC9311DF30A780035F4FC /* QALHttpSDK.framework in Frameworks */,
-				7DDEC92E1DF30A780035F4FC /* IMCore.framework in Frameworks */,
-				7DDEC9301DF30A780035F4FC /* IMSDKBugly.framework in Frameworks */,
-				7DDEC9331DF30A780035F4FC /* TLSSDK.framework in Frameworks */,
-				7DDEC9321DF30A780035F4FC /* QALSDK.framework in Frameworks */,
-				7DDEC92F1DF30A780035F4FC /* ImSDK.framework in Frameworks */,
+				7DDEC9561DF313740035F4FC /* QALHttpSDK.framework in Frameworks */,
+				7DDEC9531DF313740035F4FC /* IMCore.framework in Frameworks */,
+				7DDEC9551DF313740035F4FC /* IMSDKBugly.framework in Frameworks */,
+				7DDEC9581DF313740035F4FC /* TLSSDK.framework in Frameworks */,
+				7DDEC9571DF313740035F4FC /* QALSDK.framework in Frameworks */,
+				7DDEC9541DF313740035F4FC /* ImSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,7 +166,7 @@
 				7DDEC8C11DF2F6F20035F4FC /* Model */,
 				7DDEC8BE1DF2F6F20035F4FC /* Macro */,
 				7DDEC8C21DF2F6FC0035F4FC /* Resource */,
-				7DDEC9261DF309F90035F4FC /* Vendor */,
+				7DDEC9481DF313210035F4FC /* Vendor */,
 				7DDEC8AA1DF2F6980035F4FC /* AppDelegate.h */,
 				7DDEC8AB1DF2F6980035F4FC /* AppDelegate.m */,
 				7DDEC8B31DF2F6980035F4FC /* Assets.xcassets */,
@@ -280,27 +283,6 @@
 			path = tabBar;
 			sourceTree = "<group>";
 		};
-		7DDEC9261DF309F90035F4FC /* Vendor */ = {
-			isa = PBXGroup;
-			children = (
-				7DDEC9271DF309F90035F4FC /* TIMChat */,
-			);
-			path = Vendor;
-			sourceTree = "<group>";
-		};
-		7DDEC9271DF309F90035F4FC /* TIMChat */ = {
-			isa = PBXGroup;
-			children = (
-				7DDEC9281DF30A780035F4FC /* IMCore.framework */,
-				7DDEC9291DF30A780035F4FC /* ImSDK.framework */,
-				7DDEC92A1DF30A780035F4FC /* IMSDKBugly.framework */,
-				7DDEC92B1DF30A780035F4FC /* QALHttpSDK.framework */,
-				7DDEC92C1DF30A780035F4FC /* QALSDK.framework */,
-				7DDEC92D1DF30A780035F4FC /* TLSSDK.framework */,
-			);
-			path = TIMChat;
-			sourceTree = "<group>";
-		};
 		7DDEC9371DF310F70035F4FC /* navigationBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,6 +291,29 @@
 			);
 			name = navigationBar;
 			path = NavigationBar;
+			sourceTree = "<group>";
+		};
+		7DDEC9481DF313210035F4FC /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				7DDEC9491DF313210035F4FC /* TIMChat */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		7DDEC9491DF313210035F4FC /* TIMChat */ = {
+			isa = PBXGroup;
+			children = (
+				7DDEC94A1DF313430035F4FC /* Test.h */,
+				7DDEC94B1DF313430035F4FC /* Test.m */,
+				7DDEC94D1DF313740035F4FC /* IMCore.framework */,
+				7DDEC94E1DF313740035F4FC /* ImSDK.framework */,
+				7DDEC94F1DF313740035F4FC /* IMSDKBugly.framework */,
+				7DDEC9501DF313740035F4FC /* QALHttpSDK.framework */,
+				7DDEC9511DF313740035F4FC /* QALSDK.framework */,
+				7DDEC9521DF313740035F4FC /* TLSSDK.framework */,
+			);
+			path = TIMChat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +423,7 @@
 				7DDEC90E1DF2F7630035F4FC /* ACContactsVC.m in Sources */,
 				7DDEC90D1DF2F7630035F4FC /* ACCameraVC.m in Sources */,
 				7DDEC8AC1DF2F6980035F4FC /* AppDelegate.m in Sources */,
+				7DDEC94C1DF313430035F4FC /* Test.m in Sources */,
 				7DDEC8A91DF2F6980035F4FC /* main.m in Sources */,
 				7DDEC9111DF2F7630035F4FC /* ACRootVC.m in Sources */,
 				7DDEC9121DF2F7630035F4FC /* ACSessionVC.m in Sources */,
