@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ACRootVC;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UIWindow                  *window;
+@property (strong, nonatomic) UINavigationController    *navController;
+@property (strong, nonatomic) ACRootVC                  *rootController;
 
 @end
 

@@ -19,10 +19,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self showHomeController];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    _rootController = [[ACRootVC alloc] init];
+    _navController = [[UINavigationController alloc] initWithRootViewController:_rootController];
+    //_navController.navigationBarHidden = YES;
+    _window.rootViewController = _navController;
+    [_window makeKeyAndVisible];
     return YES;
 }
 
