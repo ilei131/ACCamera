@@ -79,13 +79,13 @@
 - (IBAction)showContact:(id)sender {
     ACContactsVC *contact = [[ACContactsVC alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:contact];
-    [self.navigationController presentViewController:nav animated:YES completion:NULL];
+    [self presentViewController:nav animated:YES completion:NULL];
 }
 
 - (IBAction)showMine:(id)sender {
     ACMineVC *mine = [[ACMineVC alloc] init];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mine];
-    [self.navigationController presentViewController:nav animated:YES completion:NULL];
+    [self presentViewController:nav animated:YES completion:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated
