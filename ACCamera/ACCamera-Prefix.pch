@@ -1,0 +1,16 @@
+//
+//  ACCamera-Prefix.pch
+//  ACCamera
+//
+//  Created by Guo Xuelei on 2016/12/3.
+//  Copyright © 2016年 Zhanggf. All rights reserved.
+//
+
+#ifndef ACCamera_Prefix_pch
+#define ACCamera_Prefix_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "macro.h"
+
+#endif /* ACCamera_Prefix_pch */
