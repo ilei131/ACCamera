@@ -39,6 +39,53 @@
     
     [_camBtn addTarget:self action:@selector(toCam) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_camBtn];
+    [self addButtons];
+}
+
+//临时
+- (void)addButtons {
+    CGFloat btnHeight = 49.0f;
+    UIButton *session = [UIButton buttonWithType:UIButtonTypeCustom];
+    [session setTitle:@"消息" forState:UIControlStateNormal];
+    [session setTitle:@"消息" forState:UIControlStateHighlighted];
+    [session setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [session addTarget:self action:@selector(showSession:) forControlEvents:UIControlEventTouchUpInside];
+    session.frame = CGRectMake(0, screenH-btnHeight, screenW/3, btnHeight);
+    [self.view addSubview:session];
+    
+    UIButton *contact = [UIButton buttonWithType:UIButtonTypeCustom];
+    [contact setTitle:@"通讯录" forState:UIControlStateNormal];
+    [contact setTitle:@"通讯录" forState:UIControlStateHighlighted];
+    [contact setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [contact addTarget:self action:@selector(showContact:) forControlEvents:UIControlEventTouchUpInside];
+    contact.frame = CGRectMake(screenW/3, screenH-btnHeight, screenW/3, btnHeight);
+    [self.view addSubview:contact];
+
+    UIButton *mine = [UIButton buttonWithType:UIButtonTypeCustom];
+    [mine setTitle:@"我的" forState:UIControlStateNormal];
+    [mine setTitle:@"我的" forState:UIControlStateHighlighted];
+    [mine setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [mine addTarget:self action:@selector(showMine:) forControlEvents:UIControlEventTouchUpInside];
+    mine.frame = CGRectMake(2*screenW/3, screenH-btnHeight, screenW/3, btnHeight);
+    [self.view addSubview:mine];
+}
+
+- (IBAction)showSession:(id)sender {
+    ACSessionVC *session = [[ACSessionVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:session];
+    [self presentViewController:nav animated:YES completion:NULL];
+}
+
+- (IBAction)showContact:(id)sender {
+    ACContactsVC *contact = [[ACContactsVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:contact];
+    [self.navigationController presentViewController:nav animated:YES completion:NULL];
+}
+
+- (IBAction)showMine:(id)sender {
+    ACMineVC *mine = [[ACMineVC alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mine];
+    [self.navigationController presentViewController:nav animated:YES completion:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated

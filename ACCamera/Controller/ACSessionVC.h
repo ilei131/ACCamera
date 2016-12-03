@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ACBaseVC.h"
 
-@interface ACSessionVC : UIViewController
+@interface ACSessionVC : ACBaseVC
 
 @end

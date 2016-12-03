@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ACBaseVC.h
 //  ACCamera
 //
 //  Created by Guo Xuelei on 2016/12/3.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ACBaseVC : UIViewController
 
 @end
-

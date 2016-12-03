@@ -7,11 +7,11 @@
 //
 
 #import "AppDelegate.h"
-#import "ACTabBarVC.h"
+#import "ACRootVC.h"
 
 @interface AppDelegate ()
 
-@property (nonatomic, strong) ACTabBarVC *homeVC;
+@property (nonatomic, strong) ACRootVC *homeVC;
 
 @end
 
@@ -28,7 +28,7 @@
 
 - (void)showHomeController {
     if (!_homeVC) {
-        _homeVC = [[ACTabBarVC alloc] init];
+        _homeVC = [[ACRootVC alloc] init];
     }
     self.window.rootViewController = _homeVC;
 }
