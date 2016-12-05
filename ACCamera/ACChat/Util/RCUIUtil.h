@@ -10,4 +10,8 @@
 
 @interface RCUIUtil : NSObject
 
++ (CGFloat)getTextHeightOfText:(NSString *)text
+                          font:(UIFont *)font
+                         width:(CGFloat)width;
+
 @end

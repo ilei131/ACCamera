@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "RCItem.h"
 
 @interface RCCell : UITableViewCell
+
+@property (nonatomic, strong) RCItem *item;
 
 @end

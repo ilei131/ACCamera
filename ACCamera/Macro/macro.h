@@ -23,5 +23,6 @@
 
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
+#define REDPOINT_WIDTH       8.0f
 
 #endif /* macro_h */
