@@ -11,6 +11,12 @@
 
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVAsset.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
 #import "macro.h"
+#import "TIMAdapter.h"
+#import "CommonLibrary.h"
+#import "Masonry.h"
 
 #endif /* ACCamera_Prefix_pch */

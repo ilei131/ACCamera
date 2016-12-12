@@ -7,6 +7,7 @@
 #ifndef macro_h
 #define macro_h
 
+#define DefaultAvatar [UIImage imageNamed:@"ic_default_avatar"]
 #define screenW [[UIScreen mainScreen] bounds].size.width
 #define screenH [[UIScreen mainScreen] bounds].size.height
 #define CAMERA_BTN_WIDTH screenW*0.32   //按钮宽度
@@ -24,5 +25,17 @@
 #define WEAKSELF typeof(self) __weak weakSelf = self;
 #define STRONGSELF typeof(weakSelf) __strong strongSelf = weakSelf;
 #define REDPOINT_WIDTH       8.0f
+
+//TIMChat
+#define kUserInputStatus @"kUserInputStatus"
+#define kDefaultMargin  8
+#define kAppStoreVersion 0
+#define kDefaultSubGroupIcon        [UIImage imageWithColor:kOrangeColor size:CGSizeMake(32, 32)]
+#define kAppLargeTextFont       [UIFont systemFontOfSize:16]
+#define kAppMiddleTextFont      [UIFont systemFontOfSize:14]
+#define kAppSmallTextFont       [UIFont systemFontOfSize:12]
+#define kDefaultSilentUntil     100
+#define kSaftyWordsCode 80001
+
 
 #endif /* macro_h */

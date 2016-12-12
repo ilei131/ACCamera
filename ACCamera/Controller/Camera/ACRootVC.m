@@ -30,8 +30,8 @@
     
     //添加相机按钮
     _camBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN.png"] forState:UIControlStateNormal];
-    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnS.png"] forState:UIControlStateHighlighted];
+    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN"] forState:UIControlStateNormal];
+    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnS"] forState:UIControlStateHighlighted];
     float buttonW = CAMERA_BTN_WIDTH;
     float buttonH = buttonW;
     _camBtn.frame = CGRectMake(0, 0, buttonW, buttonH);
