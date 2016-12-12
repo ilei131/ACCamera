@@ -230,10 +230,10 @@
 		7D931B031DFEC2520040D614 /* IMAHost+HostAPIs.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931AF21DFEC2520040D614 /* IMAHost+HostAPIs.m */; };
 		7D931B041DFEC2520040D614 /* IMAHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931AF41DFEC2520040D614 /* IMAHost.m */; };
 		7D931B051DFEC2520040D614 /* IMAUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931AF71DFEC2520040D614 /* IMAUser.m */; };
-		7D931B0C1DFEC2910040D614 /* RCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B091DFEC2910040D614 /* RCGroup.m */; };
-		7D931B0D1DFEC2910040D614 /* RCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B0B1DFEC2910040D614 /* RCItem.m */; };
-		7D931B141DFEC2C00040D614 /* RCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B111DFEC2C00040D614 /* RCCell.m */; };
-		7D931B151DFEC2C00040D614 /* RCUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B131DFEC2C00040D614 /* RCUserInfoCell.m */; };
+		7D931B1B1DFEC5B10040D614 /* RCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B181DFEC5B10040D614 /* RCGroup.m */; };
+		7D931B1C1DFEC5B10040D614 /* RCItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B1A1DFEC5B10040D614 /* RCItem.m */; };
+		7D931B221DFEC5C60040D614 /* RCCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B1F1DFEC5C60040D614 /* RCCell.m */; };
+		7D931B231DFEC5C60040D614 /* RCUserInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D931B211DFEC5C60040D614 /* RCUserInfoCell.m */; };
 		7DDEC8A91DF2F6980035F4FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC8A81DF2F6980035F4FC /* main.m */; };
 		7DDEC8AC1DF2F6980035F4FC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DDEC8AB1DF2F6980035F4FC /* AppDelegate.m */; };
 		7DDEC8B41DF2F6980035F4FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DDEC8B31DF2F6980035F4FC /* Assets.xcassets */; };
@@ -724,14 +724,14 @@
 		7D931AF51DFEC2520040D614 /* IMAModelUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAModelUser.h; sourceTree = "<group>"; };
 		7D931AF61DFEC2520040D614 /* IMAUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMAUser.h; sourceTree = "<group>"; };
 		7D931AF71DFEC2520040D614 /* IMAUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMAUser.m; sourceTree = "<group>"; };
-		7D931B081DFEC2910040D614 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
-		7D931B091DFEC2910040D614 /* RCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCGroup.m; sourceTree = "<group>"; };
-		7D931B0A1DFEC2910040D614 /* RCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCItem.h; sourceTree = "<group>"; };
-		7D931B0B1DFEC2910040D614 /* RCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCItem.m; sourceTree = "<group>"; };
-		7D931B101DFEC2C00040D614 /* RCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCell.h; sourceTree = "<group>"; };
-		7D931B111DFEC2C00040D614 /* RCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCell.m; sourceTree = "<group>"; };
-		7D931B121DFEC2C00040D614 /* RCUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfoCell.h; sourceTree = "<group>"; };
-		7D931B131DFEC2C00040D614 /* RCUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUserInfoCell.m; sourceTree = "<group>"; };
+		7D931B171DFEC5B10040D614 /* RCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCGroup.h; sourceTree = "<group>"; };
+		7D931B181DFEC5B10040D614 /* RCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCGroup.m; sourceTree = "<group>"; };
+		7D931B191DFEC5B10040D614 /* RCItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCItem.h; sourceTree = "<group>"; };
+		7D931B1A1DFEC5B10040D614 /* RCItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCItem.m; sourceTree = "<group>"; };
+		7D931B1E1DFEC5C60040D614 /* RCCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCCell.h; sourceTree = "<group>"; };
+		7D931B1F1DFEC5C60040D614 /* RCCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCCell.m; sourceTree = "<group>"; };
+		7D931B201DFEC5C60040D614 /* RCUserInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCUserInfoCell.h; sourceTree = "<group>"; };
+		7D931B211DFEC5C60040D614 /* RCUserInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCUserInfoCell.m; sourceTree = "<group>"; };
 		7DDEC8A41DF2F6980035F4FC /* ACCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ACCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DDEC8A81DF2F6980035F4FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7DDEC8AA1DF2F6980035F4FC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1668,40 +1668,40 @@
 		7D931B061DFEC2910040D614 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7D931B071DFEC2910040D614 /* Mine */,
+				7D931B161DFEC5B10040D614 /* IM */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7D931B071DFEC2910040D614 /* Mine */ = {
-			isa = PBXGroup;
-			children = (
-				7D931B081DFEC2910040D614 /* RCGroup.h */,
-				7D931B091DFEC2910040D614 /* RCGroup.m */,
-				7D931B0A1DFEC2910040D614 /* RCItem.h */,
-				7D931B0B1DFEC2910040D614 /* RCItem.m */,
-			);
-			path = Mine;
 			sourceTree = "<group>";
 		};
 		7D931B0E1DFEC2C00040D614 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				7D931B0F1DFEC2C00040D614 /* Mine */,
+				7D931B1D1DFEC5C60040D614 /* IM */,
 			);
 			name = View;
 			path = ACChat/View;
 			sourceTree = "<group>";
 		};
-		7D931B0F1DFEC2C00040D614 /* Mine */ = {
+		7D931B161DFEC5B10040D614 /* IM */ = {
 			isa = PBXGroup;
 			children = (
-				7D931B101DFEC2C00040D614 /* RCCell.h */,
-				7D931B111DFEC2C00040D614 /* RCCell.m */,
-				7D931B121DFEC2C00040D614 /* RCUserInfoCell.h */,
-				7D931B131DFEC2C00040D614 /* RCUserInfoCell.m */,
+				7D931B171DFEC5B10040D614 /* RCGroup.h */,
+				7D931B181DFEC5B10040D614 /* RCGroup.m */,
+				7D931B191DFEC5B10040D614 /* RCItem.h */,
+				7D931B1A1DFEC5B10040D614 /* RCItem.m */,
 			);
-			path = Mine;
+			path = IM;
+			sourceTree = "<group>";
+		};
+		7D931B1D1DFEC5C60040D614 /* IM */ = {
+			isa = PBXGroup;
+			children = (
+				7D931B1E1DFEC5C60040D614 /* RCCell.h */,
+				7D931B1F1DFEC5C60040D614 /* RCCell.m */,
+				7D931B201DFEC5C60040D614 /* RCUserInfoCell.h */,
+				7D931B211DFEC5C60040D614 /* RCUserInfoCell.m */,
+			);
+			path = IM;
 			sourceTree = "<group>";
 		};
 		7DDEC89B1DF2F6970035F4FC = {
@@ -1925,7 +1925,7 @@
 				7D8D9CFF1DF9A04F0041773A /* UIView+Effect.m in Sources */,
 				7D8D9DF71DF9A11A0041773A /* FontHelper.m in Sources */,
 				7D5E7D801DF59AF500C427CD /* UIFont+Size.m in Sources */,
-				7D931B151DFEC2C00040D614 /* RCUserInfoCell.m in Sources */,
+				7D931B231DFEC5C60040D614 /* RCUserInfoCell.m in Sources */,
 				7D8D9E1B1DF9A11A0041773A /* ScrollViewController.m in Sources */,
 				7D8D9E4A1DF9AB0C0041773A /* SDWebImageDecoder.m in Sources */,
 				3F7880461DF94D3A009FB1DF /* ACContactsVC.m in Sources */,
@@ -1961,8 +1961,8 @@
 				7D8D9E0D1DF9A11A0041773A /* CommonBaseViewController.m in Sources */,
 				7D8D9CF11DF9A04F0041773A /* NSData+CRC.m in Sources */,
 				7D8D9DFA1DF9A11A0041773A /* NSMutableDictionary+Json.m in Sources */,
+				7D931B1B1DFEC5B10040D614 /* RCGroup.m in Sources */,
 				7D931AFF1DFEC2520040D614 /* CustomElemCmd.m in Sources */,
-				7D931B0C1DFEC2910040D614 /* RCGroup.m in Sources */,
 				7D8D9E4D1DF9AB0C0041773A /* SDWebImageManager.m in Sources */,
 				7D8D9CF61DF9A04F0041773A /* NSString+RegexCheck.m in Sources */,
 				7D8D9E211DF9A11A0041773A /* UIImageView+InitMethod.m in Sources */,
@@ -2009,8 +2009,8 @@
 				7D8D9DF01DF9A11A0041773A /* ImageTitleButton.m in Sources */,
 				7D8D9C6C1DF991FD0041773A /* IMAContactManager+Group.m in Sources */,
 				7D931AF81DFEC2520040D614 /* IMAConversation.m in Sources */,
+				7D931B1C1DFEC5B10040D614 /* RCItem.m in Sources */,
 				7D8D9CEF1DF9A04F0041773A /* MKMapView+ZoomLevel.m in Sources */,
-				7D931B0D1DFEC2910040D614 /* RCItem.m in Sources */,
 				7D8D9DFF1DF9A11A0041773A /* NSDictionary+RequestEncoding.m in Sources */,
 				7D5E7D9E1DF59D7C00C427CD /* MASLayoutConstraint.m in Sources */,
 				3F7880471DF94D3A009FB1DF /* ACMineVC.m in Sources */,
@@ -2042,7 +2042,7 @@
 				7D8D9E0E1DF9A11A0041773A /* KeyValue.m in Sources */,
 				7D8D9E161DF9A11A0041773A /* PageScrollView.m in Sources */,
 				7D8D9E111DF9A11A0041773A /* LibraryViewController.m in Sources */,
-				7D931B141DFEC2C00040D614 /* RCCell.m in Sources */,
+				7D931B221DFEC5C60040D614 /* RCCell.m in Sources */,
 				7D8D9E191DF9A11A0041773A /* ScrollBaseViewController.m in Sources */,
 				7D8D9DE01DF9A11A0041773A /* UICollectionViewController+ADFlipTransition.m in Sources */,
 				7D8D9D001DF9A04F0041773A /* UIView+Glow.m in Sources */,
