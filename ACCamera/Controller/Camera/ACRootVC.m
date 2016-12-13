@@ -28,6 +28,7 @@
     //设置背景
     self.view.backgroundColor = [UIColor whiteColor];
     
+    [self addBottomButtons];
     //添加相机按钮
     _camBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN.png"] forState:UIControlStateNormal];
@@ -39,11 +40,10 @@
     
     [_camBtn addTarget:self action:@selector(toCam) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_camBtn];
-    [self addButtons];
 }
 
 //临时
-- (void)addButtons {
+- (void)addBottomButtons {
     CGFloat btnWidth = screenW*0.14;
     CGFloat btnHeight = btnWidth;
     
