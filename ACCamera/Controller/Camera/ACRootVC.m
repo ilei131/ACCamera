@@ -27,7 +27,12 @@
     self.navigationController.navigationBar.hidden = YES;
     //设置背景
     self.view.backgroundColor = [UIColor whiteColor];
-    
+    UIImageView *bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg.jpg"]];
+    CGFloat scaleFactor = self.view.bounds.size.width/bgImageView.bounds.size.width;
+    bgImageView.transform = CGAffineTransformMakeScale(scaleFactor,scaleFactor);
+    bgImageView.center = self.view.center;
+    [self.view addSubview:bgImageView];
+    //
     [self addBottomButtons];
     //添加相机按钮
     _camBtn = [UIButton buttonWithType:UIButtonTypeCustom];
