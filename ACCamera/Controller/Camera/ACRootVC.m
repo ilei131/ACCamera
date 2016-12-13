@@ -30,8 +30,8 @@
     
     //添加相机按钮
     _camBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN"] forState:UIControlStateNormal];
-    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnS"] forState:UIControlStateHighlighted];
+    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN.png"] forState:UIControlStateNormal];
+    [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnS.png"] forState:UIControlStateHighlighted];
     float buttonW = CAMERA_BTN_WIDTH;
     float buttonH = buttonW;
     _camBtn.frame = CGRectMake(0, 0, buttonW, buttonH);
@@ -44,29 +44,31 @@
 
 //临时
 - (void)addButtons {
-    CGFloat btnHeight = 49.0f;
+    CGFloat btnWidth = screenW*0.14;
+    CGFloat btnHeight = btnWidth;
+    
     UIButton *session = [UIButton buttonWithType:UIButtonTypeCustom];
-    [session setTitle:@"消息" forState:UIControlStateNormal];
-    [session setTitle:@"消息" forState:UIControlStateHighlighted];
-    [session setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [session setBackgroundImage:[UIImage imageNamed:@"AC_MessagesN.png"] forState:UIControlStateNormal];
+    [session setBackgroundImage:[UIImage imageNamed:@"AC_MessagesS.png"] forState:UIControlStateHighlighted];
     [session addTarget:self action:@selector(showSession:) forControlEvents:UIControlEventTouchUpInside];
-    session.frame = CGRectMake(0, screenH-btnHeight, screenW/3, btnHeight);
+    session.bounds = CGRectMake(0, 0, btnWidth,btnHeight);
+    session.center = CGPointMake(screenW/8, screenH-btnHeight/2);
     [self.view addSubview:session];
     
     UIButton *contact = [UIButton buttonWithType:UIButtonTypeCustom];
-    [contact setTitle:@"通讯录" forState:UIControlStateNormal];
-    [contact setTitle:@"通讯录" forState:UIControlStateHighlighted];
-    [contact setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [contact setBackgroundImage:[UIImage imageNamed:@"AC_FriendsN.png"] forState:UIControlStateNormal];
+    [contact setBackgroundImage:[UIImage imageNamed:@"AC_FriendsS.png"] forState:UIControlStateHighlighted];
     [contact addTarget:self action:@selector(showContact:) forControlEvents:UIControlEventTouchUpInside];
-    contact.frame = CGRectMake(screenW/3, screenH-btnHeight, screenW/3, btnHeight);
+    contact.bounds = CGRectMake(0, 0, btnWidth,btnHeight);
+    contact.center = CGPointMake(screenW*0.5, screenH-btnHeight/2);
     [self.view addSubview:contact];
 
     UIButton *mine = [UIButton buttonWithType:UIButtonTypeCustom];
-    [mine setTitle:@"我的" forState:UIControlStateNormal];
-    [mine setTitle:@"我的" forState:UIControlStateHighlighted];
-    [mine setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [mine setBackgroundImage:[UIImage imageNamed:@"AC_MeN.png"] forState:UIControlStateNormal];
+    [mine setBackgroundImage:[UIImage imageNamed:@"AC_MeS.png"] forState:UIControlStateHighlighted];
     [mine addTarget:self action:@selector(showMine:) forControlEvents:UIControlEventTouchUpInside];
-    mine.frame = CGRectMake(2*screenW/3, screenH-btnHeight, screenW/3, btnHeight);
+    mine.bounds = CGRectMake(0, 0, btnWidth,btnHeight);
+    mine.center = CGPointMake(screenW-screenW/8, screenH-btnHeight/2);
     [self.view addSubview:mine];
 }
 
