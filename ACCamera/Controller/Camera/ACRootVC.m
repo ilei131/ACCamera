@@ -32,8 +32,12 @@
     bgImageView.transform = CGAffineTransformMakeScale(scaleFactor,scaleFactor);
     bgImageView.center = self.view.center;
     [self.view addSubview:bgImageView];
-    //
+    
+    //添加社交相关按钮
     [self addBottomButtons];
+    
+
+    
     //添加相机按钮
     _camBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_camBtn setBackgroundImage:[UIImage imageNamed:@"CameraBtnN.png"] forState:UIControlStateNormal];
@@ -47,9 +51,31 @@
     [self.view addSubview:_camBtn];
 }
 
+//
+- (void)addTransitionAnimation{
+    CATransition *animation = [CATransition animation];
+    animation.duration = 0.5f;
+    animation.timingFunction = UIViewAnimationCurveEaseInOut;
+
+    //转场类型
+    animation.type = kCATransitionPush;
+    //animation.type = kCATransitionFade;
+    //animation.type = kCATransitionMoveIn;
+    //animation.type = kCATransitionReveal;
+    
+    //转场子类型
+    //animation.subtype = kCATransitionFromLeft;
+    //animation.subtype = kCATransitionFromRight;
+    animation.subtype = kCATransitionFromTop;
+    //animation.subtype = kCATransitionFromBottom;
+    
+    //
+    [self.view.window.layer addAnimation:animation forKey:nil];
+}
+
 //临时
 - (void)addBottomButtons {
-    CGFloat btnWidth = screenW*0.14;
+    CGFloat btnWidth = screenW*0.145;
     CGFloat btnHeight = btnWidth;
     
     UIButton *session = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -79,20 +105,26 @@
 
 - (IBAction)showSession:(id)sender {
     ACSessionVC *session = [[ACSessionVC alloc] init];
+    //添加专场动画
+    [self addTransitionAnimation];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:session];
-    [self presentViewController:nav animated:YES completion:NULL];
+    [self presentViewController:nav animated:NO completion:NULL];
 }
 
 - (IBAction)showContact:(id)sender {
     ACContactsVC *contact = [[ACContactsVC alloc] init];
+    //添加专场动画
+    [self addTransitionAnimation];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:contact];
-    [self presentViewController:nav animated:YES completion:NULL];
+    [self presentViewController:nav animated:NO completion:NULL];
 }
 
 - (IBAction)showMine:(id)sender {
     ACMineVC *mine = [[ACMineVC alloc] init];
+    //添加专场动画
+    [self addTransitionAnimation];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:mine];
-    [self presentViewController:nav animated:YES completion:NULL];
+    [self presentViewController:nav animated:NO completion:NULL];
 }
 
 - (void)viewWillAppear:(BOOL)animated
