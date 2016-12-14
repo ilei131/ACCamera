@@ -37,9 +37,9 @@ typedef NS_ENUM(NSInteger, IMAConType)
 // 用户更新为自己的app配置
 // TLS，以及IMSDK相关的配置
 
-#define kTLSAppid       @"1400001533"
-#define kSdkAppId       @"1400001533"
-#define kSdkAccountType @"792"
+#define kTLSAppid       @"1400021117"
+#define kSdkAppId       @"1400021117"
+#define kSdkAccountType @"9179"
 #define kQQAccountType  1
 #define kWXAccountType  2
 

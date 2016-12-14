@@ -19,4 +19,22 @@
 #import "CommonLibrary.h"
 #import "Masonry.h"
 
+///--------------
+/// 单实例相关宏定义
+///--------------
+#define SharedInstance(_ClassName)  [_ClassName sharedInstance]
+
+#define DeclareSharedIntance(_ClassName)  \
++ (_ClassName *)sharedInstance
+
+#define ImplementSharedIntance(_ClassName)    \
++ (_ClassName *)sharedInstance {  \
+static _ClassName * _staticInstance = nil;  \
+static dispatch_once_t _onceToken;  \
+dispatch_once(&_onceToken, ^{    \
+_staticInstance = [[_ClassName alloc] init]; }  \
+);   \
+return _staticInstance; \
+}
+
 #endif /* ACCamera_Prefix_pch */
