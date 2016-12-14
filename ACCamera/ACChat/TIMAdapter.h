@@ -14,7 +14,6 @@
 
 #import <TLSSDK/TLSHelper.h>
 
-
 #define kSupportCustomConversation 1
 
 typedef NS_ENUM(NSInteger, IMAConType)

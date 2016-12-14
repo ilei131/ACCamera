@@ -58,6 +58,7 @@
 		7D203FD61DF41B3800A13DF7 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D203FD51DF41B3800A13DF7 /* libc++.tbd */; };
 		7D203FD81DF41B4100A13DF7 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D203FD71DF41B4100A13DF7 /* libz.tbd */; };
 		7D203FDA1DF41B4C00A13DF7 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D203FD91DF41B4C00A13DF7 /* libsqlite3.tbd */; };
+		7D297B851E017E9C009C618E /* RCAcount.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D297B841E017E9C009C618E /* RCAcount.m */; };
 		7D5E7D5D1DF5976C00C427CD /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E7D4A1DF5976C00C427CD /* libSocialQQ.a */; };
 		7D5E7D5E1DF5976C00C427CD /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D5E7D4B1DF5976C00C427CD /* TencentOpenAPI.framework */; };
 		7D5E7D5F1DF5976C00C427CD /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7D5E7D4C1DF5976C00C427CD /* TencentOpenApi_IOS_Bundle.bundle */; };
@@ -313,6 +314,8 @@
 		7D203FD51DF41B3800A13DF7 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		7D203FD71DF41B4100A13DF7 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		7D203FD91DF41B4C00A13DF7 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		7D297B831E017E9C009C618E /* RCAcount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCAcount.h; sourceTree = "<group>"; };
+		7D297B841E017E9C009C618E /* RCAcount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCAcount.m; sourceTree = "<group>"; };
 		7D5E7D4A1DF5976C00C427CD /* libSocialQQ.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSocialQQ.a; sourceTree = "<group>"; };
 		7D5E7D4B1DF5976C00C427CD /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		7D5E7D4C1DF5976C00C427CD /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
@@ -1710,6 +1713,8 @@
 				7D931B181DFEC5B10040D614 /* RCGroup.m */,
 				7D931B191DFEC5B10040D614 /* RCItem.h */,
 				7D931B1A1DFEC5B10040D614 /* RCItem.m */,
+				7D297B831E017E9C009C618E /* RCAcount.h */,
+				7D297B841E017E9C009C618E /* RCAcount.m */,
 			);
 			path = IM;
 			sourceTree = "<group>";
@@ -1938,6 +1943,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D297B851E017E9C009C618E /* RCAcount.m in Sources */,
 				7D8D9C781DF991FD0041773A /* IMAPlatformConfig.m in Sources */,
 				7D8D9E1A1DF9A11A0041773A /* ScrollRefreshViewController.m in Sources */,
 				7D5E7DA01DF59D7C00C427CD /* MASViewConstraint.m in Sources */,

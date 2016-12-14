@@ -12,6 +12,7 @@
 #import "ACSessionVC.h"
 #import "ACContactsVC.h"
 #import "ACMineVC.h"
+#import "RCAcount.h"
 
 @interface ACRootVC ()
 @property(strong,nonatomic) UIButton    *camBtn;
@@ -49,6 +50,7 @@
     
     [_camBtn addTarget:self action:@selector(toCam) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:_camBtn];
+    [[RCAcount sharedInstance] autoLoginTIM];
 }
 
 //
