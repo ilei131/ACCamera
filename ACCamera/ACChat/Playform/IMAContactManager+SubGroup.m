@@ -31,6 +31,8 @@
     if (!_subGroupList)
     {
         _subGroupList = [[CLSafeMutableArray alloc] init];
+    }else {
+        [_subGroupList removeAllObjects];
     }
     
     for (TIMFriendGroupWithProfiles *group in array)
