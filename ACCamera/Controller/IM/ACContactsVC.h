@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ACBaseVC.h"
+#import "ACTableViewVC.h"
 
-@interface ACContactsVC : ACBaseVC
+@interface ACContactsVC : ACTableViewVC
 
 @end

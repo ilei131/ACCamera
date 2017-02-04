@@ -10,6 +10,7 @@
 
 @interface RCAcount() <TLSStrAccountRegListener,TLSPwdLoginListener> {
     IMALoginParam               *_loginParam;
+    BOOL                        _isRegist;
 }
 
 @end
@@ -21,14 +22,18 @@ ImplementSharedIntance(RCAcount);
     _loginParam = [IMALoginParam loadFromLocal];
     [IMAPlatform configWith:_loginParam.config];
     if ([_loginParam isVailed]){
+        _isRegist = NO;
         [self autoLogin];
     }else{
+        _isRegist = YES;
         [self registLogin];
     }
 }
 
 - (void)autoLogin {
-    
+    NSString *userName = [RCDataUtil readStringForKey:kUserName];
+    NSString *password = [RCDataUtil readStringForKey:kUserPassword];
+    [[TLSHelper getInstance] TLSPwdLogin:userName andPassword:password andTLSPwdLoginListener:self];
 }
 
 - (void)registLogin {
@@ -37,7 +42,9 @@ ImplementSharedIntance(RCAcount);
     NSString *version = @"1.0";
     (void)[[QalSDKProxy sharedInstance] initWithAppid:appid andSDKAppid:appid andAccType:accType];
     TLSHelper *helper = [[TLSHelper getInstance] init:appid andAppVer:version];
-    [helper TLSStrAccountReg:@"ilei1314" andPassword:@"12345678" andTLSStrAccountRegListener:self];
+    [helper TLSStrAccountReg:@"ilei1" andPassword:@"12345678" andTLSStrAccountRegListener:self];
+    [RCDataUtil writeUserData:@"ilei1" forKey:kUserName];
+    [RCDataUtil writeUserData:@"12345678" forKey:kUserPassword];
 }
 
 #pragma mark -TLSStrAccountRegListener
@@ -45,6 +52,7 @@ ImplementSharedIntance(RCAcount);
  *  注册成功
  */
 -(void)	OnStrAccountRegSuccess:(TLSUserInfo*)userInfo {
+    //userInfo.identifier即为kUserName
     [[TLSHelper getInstance] TLSPwdLogin:userInfo.identifier andPassword:@"12345678" andTLSPwdLoginListener:self];
     //[self loginWith:userInfo];
 }
@@ -55,7 +63,11 @@ ImplementSharedIntance(RCAcount);
  *  @param errInfo 错误信息
  */
 -(void)	OnStrAccountRegFail:(TLSErrInfo *) errInfo {
-
+    DLog(@"%@",errInfo.sErrorMsg);
+    //已经注册过了 需要换个随机账号重新注册
+    if (errInfo.dwErrorCode == 2) {
+        //TODO:
+    }
 }
 
 /**
@@ -64,7 +76,7 @@ ImplementSharedIntance(RCAcount);
  *  @param errInfo 错误信息
  */
 -(void)	OnStrAccountRegTimeout:(TLSErrInfo *) errInfo {
-    
+    [[HUDHelper sharedInstance] syncStopLoadingMessage:errInfo.sErrorMsg];
 }
 
 #pragma mark -TLSPwdLoginListener
@@ -139,13 +151,26 @@ ImplementSharedIntance(RCAcount);
  */
 - (void)loginIMSDK {
     //直接登录
+    WEAKSELF
     [[IMAPlatform sharedInstance] login:_loginParam succ:^{
-        [[HUDHelper sharedInstance] syncStopLoadingMessage:@"登录成功"];
+        DLog(@"%@",@"登录成功");
         [[IMAPlatform sharedInstance] configOnLoginSucc:_loginParam];
+        [weakSelf configNickName];
     } fail:^(int code, NSString *msg) {
         [[HUDHelper sharedInstance] syncStopLoadingMessage:IMALocalizedError(code, msg) delay:2 completion:^{
         }];
     }];
+}
+
+- (void)configNickName {
+    //如果是注册，默认设置nickName为kUserName
+    if (_isRegist) {
+        NSString *userName = [RCDataUtil readStringForKey:kUserName];
+        [[IMAPlatform sharedInstance].host asyncSetNickname:userName succ:^{
+            //[[HUDHelper sharedInstance] tipMessage:@"修改成功"];
+            DLog(@"%@",@"设置nickName成功");
+        } fail:nil];
+    }
 }
 
 @end

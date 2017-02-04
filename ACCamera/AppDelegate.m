@@ -25,7 +25,22 @@
     //_navController.navigationBarHidden = YES;
     _window.rootViewController = _navController;
     [_window makeKeyAndVisible];
+    [self configNav];
     return YES;
+}
+
+- (void)configNav {
+    //[UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [[UINavigationBar appearance] setBarTintColor:[UIColor themeColor]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    //[[UITableViewCell appearance] setBackgroundColor:[UIColor clearColor]];
+    //[[UITableView appearance] setSectionIndexColor:[UIColor grayColor]];
+    //[[UITableView appearance] setSectionIndexBackgroundColor:[UIColor clearColor]];
+    NSShadow *shadow = [[NSShadow alloc] init];
+    shadow.shadowColor = [UIColor darkGrayColor];
+    shadow.shadowOffset = CGSizeMake(0, 0);
+    [[UINavigationBar appearance] setTitleTextAttributes: [NSDictionary dictionaryWithObjectsAndKeys: [UIColor whiteColor], NSForegroundColorAttributeName, shadow, NSShadowAttributeName, [UIFont systemFontOfSize:19], NSFontAttributeName, nil]];
 }
 
 - (void)showHomeController {

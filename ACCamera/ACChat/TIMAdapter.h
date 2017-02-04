@@ -58,7 +58,7 @@ typedef NS_ENUM(NSInteger, IMAConType)
 // 好友分组UTF8字符串长度
 #define kSubGroupMaxLength  30
 
-#define kDefaultUserIcon            [UIImage imageNamed:@"default_user"]
+#define kDefaultUserIcon            [UIImage imageNamed:@"ic_default_avatar"]
 #define kDefaultGroupIcon           [UIImage imageNamed:@"default_group"]
 #define kDefaultSystemIcon          [UIImage imageNamed:@"default_system"]
 

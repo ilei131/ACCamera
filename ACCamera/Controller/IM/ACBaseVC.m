@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor tableBgColor];
     [self addNavBarBackButton:@selector(popBack:)];
     // Do any additional setup after loading the view.
 }

@@ -27,15 +27,23 @@
 #define REDPOINT_WIDTH       8.0f
 
 //TIMChat
-#define kUserInputStatus @"kUserInputStatus"
-#define kDefaultMargin  8
-#define kAppStoreVersion 0
-#define kDefaultSubGroupIcon        [UIImage imageWithColor:kOrangeColor size:CGSizeMake(32, 32)]
+#define kUserName               @"username"
+#define kUserPassword           @"password"
+#define kUserInputStatus        @"kUserInputStatus"
+#define kDefaultMargin          8
+#define kAppStoreVersion        0
+#define kDefaultSubGroupIcon    [UIImage imageWithColor:kOrangeColor size:CGSizeMake(32, 32)]
 #define kAppLargeTextFont       [UIFont systemFontOfSize:16]
 #define kAppMiddleTextFont      [UIFont systemFontOfSize:14]
 #define kAppSmallTextFont       [UIFont systemFontOfSize:12]
 #define kDefaultSilentUntil     100
-#define kSaftyWordsCode 80001
+#define kSaftyWordsCode         80001
 
+#define REDPOINT_WIDTH          8.0f
+#define HEIGHT_HEADER           24.0f
+#define HEIGHT_STATUSBAR        20.0f
+#define HEIGHT_TABBAR           49.0f
+#define HEIGHT_NAVBAR           44.0f
+#define HEIGHT_CALLBOARD        216.0f
 
 #endif /* macro_h */

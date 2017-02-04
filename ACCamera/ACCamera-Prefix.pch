@@ -18,6 +18,10 @@
 #import "TIMAdapter.h"
 #import "CommonLibrary.h"
 #import "Masonry.h"
+#import "RCDataUtil.h"
+#import "UIColor+Theme.h"
+#import "UIImageView+Line.h"
+#import "UIImageView+WebCache.h"
 
 ///--------------
 /// 单实例相关宏定义
@@ -36,5 +40,11 @@ _staticInstance = [[_ClassName alloc] init]; }  \
 );   \
 return _staticInstance; \
 }
+
+#ifdef DEBUG
+#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#else
+#define DLog(...)
+#endif
 
 #endif /* ACCamera_Prefix_pch */
