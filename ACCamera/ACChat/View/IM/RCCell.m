@@ -49,7 +49,7 @@
         [self.iconImageView setImage:[UIImage imageNamed:item.iconPath]];
     }else {
         [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
-            make.left.mas_equalTo(self.contentView).mas_offset(15.0f);
+            make.left.mas_equalTo(self.contentView).mas_offset(1.0f);
             make.centerY.mas_equalTo(self.contentView);
             make.width.and.height.mas_equalTo(1.0f);
         }];
