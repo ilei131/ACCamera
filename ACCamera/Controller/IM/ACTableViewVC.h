@@ -17,7 +17,7 @@
 
 @end
 
-@interface RSGroupedTableViewController : ACTableViewVC
+@interface ACGroupedTableViewController : ACTableViewVC
 
 - (void)loadTableComponent;
 

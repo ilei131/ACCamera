@@ -40,7 +40,21 @@
 
 - (void)setItem:(RCItem *)item {
     _item = item;
-    [self.iconImageView setImage:[UIImage imageNamed:item.iconPath]];
+    if (item.iconPath.length) {
+        [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.contentView).mas_offset(15.0f);
+            make.centerY.mas_equalTo(self.contentView);
+            make.width.and.height.mas_equalTo(25.0f);
+        }];
+        [self.iconImageView setImage:[UIImage imageNamed:item.iconPath]];
+    }else {
+        [self.iconImageView mas_updateConstraints:^(MASConstraintMaker *make) {
+            make.left.mas_equalTo(self.contentView).mas_offset(15.0f);
+            make.centerY.mas_equalTo(self.contentView);
+            make.width.and.height.mas_equalTo(1.0f);
+        }];
+        [self.iconImageView setImage:nil];
+    }
     [self.titleLabel setText:item.title];
     [self.midLabel setText:item.subTitle];
     //TODO rightIconPath

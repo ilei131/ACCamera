@@ -6,9 +6,9 @@
 //  Copyright © 2016年 Qi Le. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "ACTableViewVC.h"
 #import "ACBaseVC.h"
 
-@interface ACMineVC : ACBaseVC
+@interface ACMineVC : ACGroupedTableViewController
 
 @end

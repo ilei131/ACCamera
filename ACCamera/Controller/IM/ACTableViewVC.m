@@ -80,7 +80,7 @@
 
 @end
 
-@implementation RSGroupedTableViewController
+@implementation ACGroupedTableViewController
 
 - (void)loadTableComponent {
     self.view.backgroundColor = [UIColor whiteColor];
