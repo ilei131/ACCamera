@@ -18,4 +18,7 @@
 
 + (NSString *)readStringForKey:(NSString *)key;
 
++ (NSString *)randomUser;
++ (NSString *)randomPassword;
+
 @end

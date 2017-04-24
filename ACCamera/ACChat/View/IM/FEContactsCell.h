@@ -11,6 +11,7 @@
 
 @protocol FEContactsCellDelegate <NSObject>
 
+@optional
 - (void)chatAction:(NSIndexPath *)indexPath;
 - (void)phoneAction:(NSIndexPath *)indexPath;
 

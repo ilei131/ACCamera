@@ -21,6 +21,11 @@ ImplementSharedIntance(RCAcount);
 - (void)autoLoginTIM {
     _loginParam = [IMALoginParam loadFromLocal];
     [IMAPlatform configWith:_loginParam.config];
+    
+#ifdef DEBUG
+    _isRegist = NO;
+    [self autoLogin];
+#else
     if ([_loginParam isVailed]){
         _isRegist = NO;
         [self autoLogin];
@@ -28,11 +33,18 @@ ImplementSharedIntance(RCAcount);
         _isRegist = YES;
         [self registLogin];
     }
+#endif
+
 }
 
 - (void)autoLogin {
+#ifdef DEBUG
+    NSString *userName = @"9ldzfpq0";
+    NSString *password = @"9ldzfpq0";
+#else
     NSString *userName = [RCDataUtil readStringForKey:kUserName];
     NSString *password = [RCDataUtil readStringForKey:kUserPassword];
+#endif
     [[TLSHelper getInstance] TLSPwdLogin:userName andPassword:password andTLSPwdLoginListener:self];
 }
 
@@ -42,9 +54,12 @@ ImplementSharedIntance(RCAcount);
     NSString *version = @"1.0";
     (void)[[QalSDKProxy sharedInstance] initWithAppid:appid andSDKAppid:appid andAccType:accType];
     TLSHelper *helper = [[TLSHelper getInstance] init:appid andAppVer:version];
-    [helper TLSStrAccountReg:@"ilei1" andPassword:@"12345678" andTLSStrAccountRegListener:self];
-    [RCDataUtil writeUserData:@"ilei1" forKey:kUserName];
-    [RCDataUtil writeUserData:@"12345678" forKey:kUserPassword];
+    NSString *randomUser = [RCDataUtil randomUser];
+    NSString *randomPassword = [RCDataUtil randomPassword];
+    
+    [helper TLSStrAccountReg:randomUser andPassword:randomPassword andTLSStrAccountRegListener:self];
+    [RCDataUtil writeUserData:randomUser forKey:kUserName];
+    [RCDataUtil writeUserData:randomPassword forKey:kUserPassword];
 }
 
 #pragma mark -TLSStrAccountRegListener
@@ -53,7 +68,8 @@ ImplementSharedIntance(RCAcount);
  */
 -(void)	OnStrAccountRegSuccess:(TLSUserInfo*)userInfo {
     //userInfo.identifier即为kUserName
-    [[TLSHelper getInstance] TLSPwdLogin:userInfo.identifier andPassword:@"12345678" andTLSPwdLoginListener:self];
+    NSString *password = [RCDataUtil readUserDataForKey:kUserPassword];
+    [[TLSHelper getInstance] TLSPwdLogin:userInfo.identifier andPassword:password andTLSPwdLoginListener:self];
     //[self loginWith:userInfo];
 }
 

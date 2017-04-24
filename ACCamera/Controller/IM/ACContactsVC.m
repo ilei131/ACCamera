@@ -13,7 +13,7 @@
 #import "FEPersonalGroupHeaderView.h"
 #import "FEContactsCell.h"
 
-@interface ACContactsVC () <TLAddMenuViewDelegate,FEPersonalGroupHeaderViewDelegate> {
+@interface ACContactsVC () <TLAddMenuViewDelegate,FEPersonalGroupHeaderViewDelegate,FEContactsCellDelegate> {
     __weak CLSafeMutableArray *_contact;
 }
 
@@ -104,6 +104,7 @@
     IMASubGroup *group = [_contact objectAtIndex:indexPath.section];
     IMAUser *friend = [group.friends objectAtIndex:indexPath.row];
     [cell setContact:friend];
+    cell.delegate = self;
     return cell;
 }
 
@@ -145,6 +146,12 @@
 - (void)headerViewClicked:(FEPersonalGroupHeaderView *)headerView {
     NSIndexSet *indexSet = [NSIndexSet indexSetWithIndex:headerView.tag];
     [self.tableView reloadSections:indexSet withRowAnimation:UITableViewRowAnimationFade];
+}
+
+
+#pragma mark - FEContactsCellDelegate
+- (void)chatAction:(NSIndexPath *)indexPath {
+    
 }
 
 

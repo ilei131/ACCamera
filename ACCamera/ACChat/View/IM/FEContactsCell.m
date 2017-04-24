@@ -32,9 +32,6 @@
         [self.contentView addSubview:self.userNameLabel];
         [self.contentView addSubview:self.onlineStateLabel];
         [self.contentView addSubview:self.chatBtn];
-        [self.contentView addSubview:self.phoneBtn];
-        [self.contentView addSubview:self.deviceImageView];
-
         [self p_addMasonry];
         
         self.backgroundColor = [UIColor whiteColor];
@@ -44,7 +41,6 @@
 
 - (void)setContact:(IMAUser *)contact {
     _contact = contact;
-    self.chatBtn.hidden = YES;
     if (contact.remark) {
         self.userNameLabel.text = contact.remark;
     }else if (contact.nickName) {
@@ -60,32 +56,19 @@
 - (void)p_addMasonry {
     [self.avatarImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.contentView).mas_offset(15.0f);
-//        make.centerY.mas_equalTo(self.contentView);
-//        make.width.and.height.mas_equalTo(46.0f);
         make.top.mas_equalTo(10);
         make.bottom.mas_equalTo(-10);
         make.width.mas_equalTo(self.avatarImageView.mas_height);
     }];
-    [self.deviceImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.avatarImageView);
-        make.right.mas_equalTo(self.contentView.mas_right).mas_offset(-22);
-        //make.centerY.mas_equalTo(self.iconImageView);
-        make.width.and.height.mas_equalTo(15.0f);
+    [self.chatBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.mas_equalTo(self.avatarImageView);
+        make.right.mas_equalTo(self.contentView.mas_right).mas_offset(-15);
+        make.width.and.height.mas_equalTo(32);
     }];
     [self.userNameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.mas_equalTo(self.avatarImageView.mas_right).mas_offset(10);
         make.centerY.mas_equalTo(self.avatarImageView);
-        //make.right.mas_lessThanOrEqualTo(self.deviceImageView.mas_left).mas_offset(-4);
-    }];
-    [self.phoneBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.avatarImageView);
-        make.right.mas_equalTo(self.contentView.mas_right).mas_offset(-15);
-        make.width.and.height.mas_equalTo(32);
-    }];
-    [self.chatBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.bottom.mas_equalTo(self.avatarImageView);
-        make.right.mas_equalTo(self.phoneBtn.mas_left).mas_offset(-10);
-        make.width.and.height.mas_equalTo(32);
+        make.right.mas_equalTo(self.chatBtn.mas_left).mas_offset(4);
     }];
     [self.onlineStateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.mas_equalTo(self.avatarImageView);
@@ -128,27 +111,8 @@
         [_chatBtn addTarget:self action:@selector(chatAction:) forControlEvents:UIControlEventTouchUpInside];
         [_chatBtn setImage:IMAGE(@"contacts_chat_icon") forState:UIControlStateNormal];
         [_chatBtn setImage:IMAGE(@"contacts_chat_icon_h") forState:UIControlStateHighlighted];
-        _chatBtn.imageEdgeInsets = UIEdgeInsetsMake(10, 5, 0, 5);
     }
     return _chatBtn;
-}
-
-- (UIButton *)phoneBtn {
-    if (!_phoneBtn) {
-        _phoneBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        [_phoneBtn addTarget:self action:@selector(phoneAction:) forControlEvents:UIControlEventTouchUpInside];
-        [_phoneBtn setImage:IMAGE(@"contacts_phone_icon") forState:UIControlStateNormal];
-        [_phoneBtn setImage:IMAGE(@"contacts_phone_icon_h") forState:UIControlStateHighlighted];
-        _phoneBtn.imageEdgeInsets = UIEdgeInsetsMake(10, 5, 0, 5);
-    }
-    return _phoneBtn;
-}
-
-- (UIImageView *)deviceImageView {
-    if (!_deviceImageView) {
-        _deviceImageView = [[UIImageView alloc] init];
-    }
-    return _deviceImageView;
 }
 
 - (IBAction)chatAction:(id)sender {
